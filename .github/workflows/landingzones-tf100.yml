@@ -7,6 +7,13 @@ name: landingzones-tf100
 
 on:
   workflow_dispatch:
+    inputs:
+          TF_action:
+            type: choice
+            description: Choose either apply or destroy
+            options: 
+            - apply
+            - destroy
   pull_request:
     paths-ignore:
       - 'documentation/**'
